@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>    
+<form method="POST">
+    {% csrf_token %}
+    <center><h1 style="font-family: Cooper Black;">Login</h1></center>
+    <center>
+    <table>  
+    <tr style="font-family:Elephant;">
+        <td>
+           User Name
+        </td>
+        <td>
+            <center><input type="text" name="textusername"></input></center> 
+        </td>
+    </tr>
+    <tr style="font-family:Elephant;">
+        <td>
+           <center>Password</center>
+        </td>
+        <td>
+            <center><input type="text" name="textpassword"></input></center> 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <button type="submit" name="submit"><center>submit</center></button>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            {{result}}
+        </td>
+    </tr>
+    </table>
+    </center>
+
+    <style>
+        body{
+            background-image: url(https://cdn.pixabay.com/photo/2022/07/26/19/00/mountain-7346526_640.jpg);
+            background-size: cover;
+        }
+    </style>
+    
+    
+    
+</form>
+</html>    
+
+
+
+    

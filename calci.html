@@ -1,0 +1,48 @@
+{% extends 'index.html'   %}
+
+{% block content  %}
+<br/>
+<form method="POST">
+{% csrf_token %}
+<table>
+<tr>
+    <td>
+        First Number
+    </td>
+    <td>
+        <input type="text" class="form-control" name="textfirstnumber"></input> 
+    </td>
+</tr>
+<tr>
+    <td>
+        Second Number
+    </td>
+    <td>
+        <input type="text" class="form-control" name="textsecondnumber"></input> 
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <button type="submit"  class="btn btn-primary"  name="buttonadd" >add </button>
+        <button type="submit" class="btn btn-success" name="buttonsub" >sub </button>
+        <button type="submit" class="btn btn-danger" name="buttonmul" >mul </button>
+        <button type="submit"  class="btn btn-warning" name="buttondiv" >div </button>
+    </td>
+</tr>
+<tr>
+    <td>
+        {{result}}
+    </td>
+</tr>
+</table>
+<style>
+    body{
+        background-image: url(https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg);
+    }
+</style>
+
+
+
+</form>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'index.html'   %}
+
+{% block content  %}
+<form method="POST"  enctype="multipart/form-data"  >
+{% csrf_token %}
+<center><h1 style="font-family: Stencil;">ARTIFICIAL INTELLIGENCE</h1></center>
+<center><h5 style="font-family: Elephant;">CLASSIFICATION OF WILD ANIMALS</h5></center>
+<table>
+<tr style="font-family: Elephant;">
+    <td>
+      Upload file
+    </td>
+    <td>
+       <input type="file" name="myfile">
+       <button type="submit" name="submit" >upload </button>
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+
+    </td>
+</tr>
+<tr>
+    <td>
+        {{result}}
+    </td>
+</tr>
+</table>
+
+<style>
+    body{
+        background-image: url(https://images.ctfassets.net/cnu0m8re1exe/2vrDW7u8ucHnLWsRo4Qcxo/639c27205eca182b65847a10c54ecc6c/African-elephant.jpg);
+        background-size: cover;
+    }
+    video{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        background-size: cover;
+        zoom: 70%;
+    }
+</style>
+  <video loop muted plays-inline >
+        <source src="/GUI/statics/img/3842814-uhd_3840_2160_30fps (2).mp4">
+  </video>
+</form>
+
+{% endblock %}

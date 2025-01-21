@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <b>
+        <a class="nav-link" href="{% url 'home' %}"  p>BACK</a>
+    </b>
+<head>
+    <title>Employee Retention Prediction</title>
+    <style>
+        body {
+            font-family: Elephant;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0vh;
+            padding-bottom: 30%;
+        }
+
+        .container {
+            background-color:blur;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px 30px;
+            max-width: 350px;
+            width: 100%;
+            padding-bottom: 10%;
+            padding-top: 10%;
+            background-position: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 3px;
+            color: #2a2626;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            padding: 2px;
+            margin-top: 2px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center">
+    <div class="container">
+        <h1>Employee Retention Prediction Form</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="satisfaction_level">Satisfaction Level:</label>
+            <input type="text" id="satisfaction_level" name="satisfaction_level"><br>
+
+            <label for="last_evaluation">Last Evaluation:</label>
+            <input type="text" id="last_evaluation" name="last_evaluation"><br>
+
+            <label for="number_project">Number of Projects:</label>
+            <input type="text" id="number_project" name="number_project"><br>
+
+            <label for="average_montly_hours">Average Monthly Hours:</label>
+            <input type="text" id="average_montly_hours" name="average_montly_hours"><br>
+
+            <label for="time_spend_company">Time Spent at Company:</label>
+            <input type="text" id="time_spend_company" name="time_spend_company"><br>
+
+            <label for="Work_accident">Work Accident:</label>
+            <input type="text" id="Work_accident" name="Work_accident"><br>
+
+            <label for="promotion_last_5years">Promotion in Last 5 Years:</label>
+            <input type="text" id="promotion_last_5years" name="promotion_last_5years"><br>
+
+            <label for="Department">Department:</label>
+            <input type="text" id="Department" name="Department"><br>
+
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary"><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+        <p>{{ result }}</p>
+        {% endif %}
+    </div>
+    </table>
+</body>
+<style>
+    body{
+        background-image: url(https://19580542.fs1.hubspotusercontent-na1.net/hub/19580542/hubfs/0ce30c18-2b3b-48e1-be38-dad24726679c.jpeg?width=725&name=0ce30c18-2b3b-48e1-be38-dad24726679c.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<style>
+    table{
+        zoom: 0%;
+    }
+</style>
+
+</html>
+ 
